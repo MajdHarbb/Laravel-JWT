@@ -58,6 +58,9 @@ class AuthController extends Controller
         ], 201);
     }
 
+    public function updateUserInfo(){
+        
+    }
     /**
      * Log the user out (Invalidate the token).
      *

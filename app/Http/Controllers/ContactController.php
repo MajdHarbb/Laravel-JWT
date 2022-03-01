@@ -17,12 +17,16 @@ class ContactController extends Controller
 
     function insertMessage(Request $request){
         $data = $request->all();
+        
         $msg = new Contact;
         $msg->user_id = $data["user_id"];
         $msg->contact_message =  $data["contact_message"];
         $msg->save();
 
-        return response()->json(["insert message success" => true]);
+        return response()->json([
+            'message' => 'message successfully added',
+            'msg' => $msg
+        ], 201);
 
     }
 }
