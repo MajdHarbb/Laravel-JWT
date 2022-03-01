@@ -15,13 +15,14 @@ class ContactController extends Controller
         return $contacts;
     }
 
-    function insertMessage(){
+    function insertMessage(Request $request){
+        $data = $request->all();
         $msg = new Contact;
-        $msg->user_id = "6";
-        $msg->contact_message = "6";
+        $msg->user_id = $data["user_id"];
+        $msg->contact_message =  $data["contact_message"];
         $msg->save();
 
-        return response()->json(["success" => true]);
+        return response()->json(["insert message success" => true]);
 
     }
 }
