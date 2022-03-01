@@ -25,5 +25,5 @@ Route::group([
     Route::get('/user-profile', [AuthController::class, 'userProfile']);
 
     //Messages Routes
-    Route::get('/contact', [ContactController::class, 'getAllMessages']);
+    Route::post('/contact', [ContactController::class, 'insertMessage']);
 });
