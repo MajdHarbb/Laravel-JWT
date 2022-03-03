@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use Validator;
 
@@ -58,9 +59,7 @@ class AuthController extends Controller
         ], 201);
     }
 
-    public function updateUserInfo(){
-        
-    }
+    
     /**
      * Log the user out (Invalidate the token).
      *
@@ -101,6 +100,32 @@ class AuthController extends Controller
             'user' => auth()->user()
         ]);
     }
+    /**
+     * Get the authenticated User.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function updateinfo(Request $request) {
+        
+        $data = $request->all();
+        $datauser_id = $data["user_id"];
+        $validator = Validator::make($request->all(), [
+            'first_name' => 'required|string|between:2,100',
+            'last_name' => 'required|string|between:2,100',
+            'email' => 'required|string|email|max:100|unique:users',
+            'password' => 'required|string|confirmed|min:6',
+        ]);
+       
+
+        DB::table('users')
+            ->where('id', $datauser_id)
+            ->update(array_merge(
+                $validator->validated(),
+                ['password' => bcrypt($request->password)]
+            ));
+        return response()->json(['message' => 'info successfully updated']);
+    }
+       
 
     
 }
