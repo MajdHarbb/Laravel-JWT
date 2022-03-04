@@ -10,12 +10,12 @@ use Validator;
 
 class ContactController extends Controller
 {
-    //
+    //get all messages from contacts db
     function getAllMessages() {
         $contacts = Contact::all();
         return $contacts;
     }
-
+    //insert message to contacts db
     function insertMessage(Request $request){
         $data = $request->all();
         
