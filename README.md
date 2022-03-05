@@ -38,16 +38,20 @@ Users table:
 
 Navigate to App/Http/Controllers to find AuthController and ContactController. 
 
-Contact Controller contains a function that adds the user message to contacts table: 
-
-![alt text](public/Assets/insertmessage.png)
-
 Contact Controller contains register, login, logout and update functions.
 
+Register: 
 ![alt text](public/Assets/register.png) 
+
+Login:
 ![alt text](public/Assets/login.png) 
+
+Logout and user profile data: 
 ![alt text](public/Assets/logs.png) 
 
+Update user info: 
+
+![alt text](public/Assets/update.png) 
 
 ### Router file:
 
@@ -55,6 +59,20 @@ Contact Controller contains register, login, logout and update functions.
 
 ## Demo
 
-### User Registration API:
+To test your API's go to post man and apply the following: 
 
-![alt text](public/Assets/routes.png) 
+### User Registration API
+Register a new user: 
+![alt text](public/Assets/regPostman.png) 
+
+### User Login API
+On login a new JWT Token is generated: 
+![alt text](public/Assets/loginPostman.png) 
+
+### User Info API
+Get all user data by his generated JWT: 
+![alt text](public/Assets/dataPostman.png)
+
+### Logout API
+Destroy the JWT : 
+![alt text](public/Assets/logoutpostman.png)
