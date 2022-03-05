@@ -26,12 +26,35 @@ This project contains:
 
 ### Table Migration files:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Navigate to database/migrations to find migration files. 
 
-## Security Vulnerabilities
+Contacts table: 
+![alt text](public/Assets/contacts-migration.png)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Users table: 
+![alt text](public/Assets/users-mig.png)
 
-## License
+### Controller files:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Navigate to App/Http/Controllers to find AuthController and ContactController. 
+
+Contact Controller contains a function that adds the user message to contacts table: 
+
+![alt text](public/Assets/insertmessage.png)
+
+Contact Controller contains register, login, logout and update functions.
+
+![alt text](public/Assets/register.png) 
+![alt text](public/Assets/login.png) 
+![alt text](public/Assets/logs.png) 
+
+
+### Router file:
+
+![alt text](public/Assets/routes.png) 
+
+## Demo
+
+### User Registration API:
+
+![alt text](public/Assets/routes.png) 
