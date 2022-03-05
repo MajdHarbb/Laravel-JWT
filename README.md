@@ -29,9 +29,11 @@ This project contains:
 Navigate to database/migrations to find migration files. 
 
 Contacts table: 
+
 ![alt text](public/Assets/contacts-migration.png)
 
 Users table: 
+
 ![alt text](public/Assets/users-mig.png)
 
 ### Controller files:
@@ -41,12 +43,15 @@ Navigate to App/Http/Controllers to find AuthController and ContactController.
 Contact Controller contains register, login, logout and update functions.
 
 Register: 
+
 ![alt text](public/Assets/register.png) 
 
 Login:
+
 ![alt text](public/Assets/login.png) 
 
 Logout and user profile data: 
+
 ![alt text](public/Assets/logs.png) 
 
 Update user info: 
